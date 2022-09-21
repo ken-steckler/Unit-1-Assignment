@@ -190,15 +190,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="182" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gn-GJ-uoz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4gn-GJ-uoz">
                                                     <rect key="frame" x="0.0" y="0.0" width="182" height="250"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4gn-GJ-uoz" secondAttribute="trailing" id="DRQ-QU-JWG"/>
+                                                <constraint firstItem="4gn-GJ-uoz" firstAttribute="leading" secondItem="xDm-hT-vjY" secondAttribute="leading" id="U6c-mg-j4K"/>
+                                                <constraint firstItem="4gn-GJ-uoz" firstAttribute="top" secondItem="xDm-hT-vjY" secondAttribute="top" id="kRr-Su-G02"/>
+                                                <constraint firstAttribute="bottom" secondItem="4gn-GJ-uoz" secondAttribute="bottom" id="wfO-h7-3ef"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="182" height="250"/>
                                         <connections>
                                             <outlet property="posterView" destination="4gn-GJ-uoz" id="kEc-Hi-S0f"/>
+                                            <segue destination="Z4F-we-mr0" kind="show" id="CUe-Zv-o3h"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -236,6 +242,9 @@
             <point key="canvasLocation" x="806.07476635514013" y="-260.47516198704108"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CUe-Zv-o3h"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>

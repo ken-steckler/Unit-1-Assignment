@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="tN8-U9-WlR">
-                                <rect key="frame" x="152" y="353" width="86" height="139"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OGc-GU-Dti">
+                                <rect key="frame" x="95" y="293.66666666666669" width="200" height="267.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="tN8-U9-WlR">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="8Xs-3x-uhq"/>
+                                            <constraint firstAttribute="width" constant="200" id="NON-QH-MVF"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="w9c-ao-6qw"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="zn6-5l-kR8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="FLIX" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPw-AL-ihB">
+                                        <rect key="frame" x="50" y="200" width="100" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="8I4-qB-fHn"/>
+                                            <constraint firstAttribute="width" constant="150" id="xOC-Ww-do8"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96921721251059456" green="0.98089159149484539" blue="0.97187042380814082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="tN8-U9-WlR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="309" id="8n1-VS-5vN"/>
-                            <constraint firstItem="tN8-U9-WlR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="ATv-jD-dRs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tN8-U9-WlR" secondAttribute="trailing" constant="126" id="Tgv-ao-FO2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tN8-U9-WlR" secondAttribute="bottom" constant="318" id="jef-aN-ygI"/>
+                            <constraint firstItem="OGc-GU-Dti" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5be-Tk-pN9"/>
+                            <constraint firstItem="OGc-GU-Dti" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XSa-Hi-Me5"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,8 +56,5 @@
     </scenes>
     <resources>
         <image name="launch_image" width="138" height="139"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
